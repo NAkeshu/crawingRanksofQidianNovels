@@ -26,7 +26,7 @@ def getRankList(html, Num):
 
 def printSpace(n):
     for i in range(n):
-        print("");
+        print("")
 
 def findRankList(Num, html):
     KindofRand = {"1":"-------原创风云榜·新书---------", "2":"---------24小时热销榜----------", "3":"-------新锐会员周点击榜--------", "4":"-----------周推荐榜-----------", "5":"---------签约作家新书榜--------"}
@@ -64,9 +64,7 @@ def getMainInfo(RankNum, BookNum, html):
     BookIntro = BookName + "\n ===================== \n" + MainIntro + "\n\n" + MainInfo
     return BookIntro
 
-def main():
-    url = "https://www.qidian.com"
-    html = getHtmlText(url)
+def gettheRank(html):
     i = 1
     while (i <= 1):
         i += 1
@@ -98,6 +96,11 @@ def main():
             printSpace(1)
             print (InfoofBook)
         printSpace(3)
+
+def main():
+    url = "https://www.qidian.com"
+    html = getHtmlText(url)
+    gettheRank(html)
 
 if __name__ == "__main__":
     main()
